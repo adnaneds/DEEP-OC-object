@@ -95,4 +95,4 @@ RUN apt-get clean && \
 EXPOSE 5000 6006 8888
 
 # Launch deepaas
-CMD ["deepaas-run", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
+CMD ["deepaas-run", "--debug=True", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
