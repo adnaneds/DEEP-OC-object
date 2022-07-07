@@ -63,6 +63,8 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 
 ENV RCLONE_CONFIG=/srv/.rclone/rclone.conf
 
+
+# Install deepaas upgrade 
 # Install DEEPaaS from PyPi
 RUN pip install --upgrade git+https://github.com/indigo-dc/deepaas.git@master
 
@@ -95,4 +97,4 @@ RUN apt-get clean && \
 EXPOSE 5000 6006 8888
 
 # Launch deepaas
-CMD ["deepaas-run", "--debug=True", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
+CMD ["deepaas-run", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
